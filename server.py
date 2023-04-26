@@ -4,29 +4,38 @@ from socket import *
 import json
 
 
-def server(host, port):
-    server = socket(AF_INET, SOCK_STREAM)
-    server.bind((host, int(port)))
-    server.listen(3)
+def server_arguments():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-a', nargs='?', default='localhost')
+    parser.add_argument('-p', default=8000)
+    args = parser.parse_args()
+    return args
 
+
+def server_init(host: str, port: int):
+    server = socket(AF_INET, SOCK_STREAM)
+    server.bind((host, port))
+    server.listen(3)
+    return server
+
+
+def requests_server(server_socket, response_message: dict):
     while True:
-        client, addr = server.accept()
+        client, addr = server_socket.accept()
         data = client.recv(10000)
         valid_data = json.loads(data)
         print(f'Presence message from client: {valid_data}')
-        msg = json.dumps({
-            "response": 200,
-            "alert": "Необязательное сообщение/уведомление"
-        })
-        client.send(msg.encode('UTF-8'))
+        client.send(json.dumps(response_message).encode('UTF-8'))
 
         client.close()
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-a', nargs='?', default='localhost')
-    parser.add_argument('-p', default=8000)
-    args = parser.parse_args()
+    arguments = server_arguments()
+    main_server = server_init(arguments.a, int(arguments.p))
 
-    server(args.a, args.p)
+    message = {
+            "response": 200,
+            "alert": "Необязательное сообщение/уведомление"
+        }
+    requests_server(main_server, message)
