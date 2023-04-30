@@ -2,6 +2,7 @@ import argparse
 import socket
 from socket import *
 import json
+from log.server_log_config import server_log
 
 
 def server_arguments():
@@ -24,7 +25,7 @@ def requests_server(server_socket, response_message: dict):
         client, addr = server_socket.accept()
         data = client.recv(10000)
         valid_data = json.loads(data)
-        print(f'Presence message from client: {valid_data}')
+        server_log(f'Presence message from client: {valid_data}')
         client.send(json.dumps(response_message).encode('UTF-8'))
 
         client.close()
@@ -33,9 +34,8 @@ def requests_server(server_socket, response_message: dict):
 if __name__ == '__main__':
     arguments = server_arguments()
     main_server = server_init(arguments.a, int(arguments.p))
-
     message = {
-            "response": 200,
-            "alert": "Необязательное сообщение/уведомление"
-        }
+        "response": 200,
+        "alert": "Необязательное сообщение/уведомление"
+    }
     requests_server(main_server, message)

@@ -2,6 +2,7 @@ import datetime
 import argparse
 import json
 from socket import *
+from log.client_log_config import client_log
 
 
 def client_arguments():
@@ -22,7 +23,7 @@ def requests_client(client_server, response_message: dict):
     client_server.send(json.dumps(response_message).encode('UTF-8'))
     data = client_server.recv(10000)
     valid_data = json.loads(data)
-    print(f'Response from server: status code: {valid_data["response"]}, length: {len(data)} bytes')
+    client_log(f'Response from server: status code: {valid_data["response"]}, length: {len(data)} bytes')
 
     client_server.close()
 
