@@ -1,6 +1,7 @@
 import logging
 from .decorator import log
 
+
 @log
 def client_log(data):
     logging.basicConfig(level='INFO')
