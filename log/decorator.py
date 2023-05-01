@@ -15,8 +15,7 @@ def log(func):
         handler.setFormatter(format_)
 
         logger.addHandler(handler)
-        logger.info(f'Функция {func.__name__} вызвана из функции main"ых на серверной и клиентской '
-                 f'сторонах при работе мессенджера.')
+        logger.info(f'Функция {func.__name__} вызвана из функции main')
 
         f = func(*args, **kwargs)
         return f

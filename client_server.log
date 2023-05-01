@@ -1,4 +1,4 @@
-2023-05-01 17:04:44,045 Функция server_log вызвана из функции main"ых на серверной и клиентской сторонах при работе мессенджера.
-2023-05-01 17:04:44,045 INFO server_log_config Presence message from client: {'action': 'presence', 'time': '2023-05-01', 'type': 'status', 'user': {'account_name': 'C0deMaver1ck', 'status': 'Yep, I am here!'}}
-2023-05-01 17:04:44,046 Функция client_log вызвана из функции main"ых на серверной и клиентской сторонах при работе мессенджера.
-2023-05-01 17:04:44,046 INFO client_log_config Response from server: status code: 200, length: 236 bytes
+2023-05-01 17:08:46,825 Функция server_log вызвана из функции main
+2023-05-01 17:08:46,825 INFO server_log_config Presence message from client: {'action': 'presence', 'time': '2023-05-01', 'type': 'status', 'user': {'account_name': 'C0deMaver1ck', 'status': 'Yep, I am here!'}}
+2023-05-01 17:08:46,826 Функция client_log вызвана из функции main
+2023-05-01 17:08:46,826 INFO client_log_config Response from server: status code: 200, length: 236 bytes
