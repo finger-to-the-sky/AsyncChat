@@ -1,4 +1,0 @@
-2023-04-30 18:59:51,118 INFO server_log_config Presence message from client: {'action': 'presence', 'time': '2023-04-30', 'type': 'status', 'user': {'account_name': 'C0deMaver1ck', 'status': 'Yep, I am here!'}}
-2023-04-30 18:59:56,386 INFO server_log_config Presence message from client: {'action': 'presence', 'time': '2023-04-30', 'type': 'status', 'user': {'account_name': 'C0deMaver1ck', 'status': 'Yep, I am here!'}}
-Presence message from client: {'action': 'presence', 'time': '2023-04-30', 'type': 'status', 'user': {'account_name': 'C0deMaver1ck', 'status': 'Yep, I am here!'}}
-2023-04-30 18:59:56,386 INFO server_log_config Presence message from client: {'action': 'presence', 'time': '2023-04-30', 'type': 'status', 'user': {'account_name': 'C0deMaver1ck', 'status': 'Yep, I am here!'}}
