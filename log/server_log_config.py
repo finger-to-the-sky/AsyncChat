@@ -1,21 +1,28 @@
 import logging
+import os
+import sys
 from logging.handlers import TimedRotatingFileHandler
-from .decorator import log
+sys.path.append('../')
+from other import variables
 
-logging.basicConfig(level='INFO')
-logger = logging.getLogger('server')
+server_formatter = logging.Formatter("%(asctime)s %(levelname)s %(module)s %(message)s")
 
+path = os.path.dirname(os.path.abspath(__file__))
+path = os.path.join(path, 'server.log')
 
-@log
-def server_log(data):
-    filename = 'client_server.log'
-    handler = logging.FileHandler(filename)
+stream_handler = logging.StreamHandler(sys.stderr)
+stream_handler.setFormatter(server_formatter)
+stream_handler.setLevel(logging.ERROR)
+log_file = TimedRotatingFileHandler(path, encoding='utf-8', interval=1, when='D')
 
-    format_ = logging.Formatter('%(asctime)s %(levelname)s %(module)s %(message)s')
-    handler.setFormatter(format_)
+LOGGER = logging.getLogger('server')
+LOGGER.addHandler(stream_handler)
+LOGGER.addHandler(log_file)
+LOGGER.setLevel(variables.LOGGING_LEVEL)
 
-    handler_2 = TimedRotatingFileHandler(filename, when="midnight", interval=1, backupCount=7)
-    handler_2.suffix = "%Y-%m-%d"
-    logger.addHandler(handler)
-    logger.info(data)
-    logger.addHandler(handler_2)
+# отладка
+if __name__ == '__main__':
+    LOGGER.critical('Критическая ошибка')
+    LOGGER.error('Ошибка')
+    LOGGER.debug('Отладочная информация')
+    LOGGER.info('Информационное сообщение')
