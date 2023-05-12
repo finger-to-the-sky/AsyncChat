@@ -1,7 +1,9 @@
 from .variables import MAX_PACKAGE_LENGTH, ENCODING
 import json
+from log.decorator import log
 
 
+@log
 def get_message(client):
     """
     Утилита приёма и декодирования сообщения принимает байты выдаёт словарь,
@@ -18,7 +20,7 @@ def get_message(client):
         raise Exception('Принято некорректное сообщение от удалённого компьютера.')
     raise Exception('Принято некорректное сообщение от удалённого компьютера.')
 
-
+@log
 def send_message(sock, message):
     """
     Утилита кодирования и отправки сообщения

@@ -1,6 +1,8 @@
 import argparse
+from log.decorator import log
 
 
+@log
 def arguments():
     """
     Функция принятия и передачи аргументов сокетам с значениями по дефолту

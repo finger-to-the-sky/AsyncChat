@@ -1,3 +1,5 @@
+import logging
+
 from other.command_arguments import arguments
 import socket
 import select
@@ -6,8 +8,13 @@ import time
 from other.utils import send_message, get_message
 from other.variables import MAX_CONNECTIONS, ACTION, TIME, USER, \
     ACCOUNT_NAME, SENDER, PRESENCE, RESPONSE, MESSAGE, MESSAGE_TEXT, ERROR
+import log.server_log_config
+from log.decorator import log
+
+LOGGER = logging.getLogger('server')
 
 
+@log
 def process_client_message(message, messages_list, client):
     """
     Обработчик сообщений от клиентов, принимает словарь - сообщение от клинта,
@@ -38,6 +45,7 @@ def process_client_message(message, messages_list, client):
         pass
 
 
+@log
 def server_socket(addr: str, port: int):
     """
     Функция установки соединения сокета
@@ -45,6 +53,11 @@ def server_socket(addr: str, port: int):
     :param port: Порт
     :return: server socket
     """
+    LOGGER.info(
+        f'Запущен сервер, порт для подключений: {port}, '
+        f'адрес с которого принимаются подключения: {addr}. '
+        f'Если адрес не указан, принимаются соединения с любых адресов.')
+
     transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     transport.bind((addr, port))
     transport.settimeout(0.5)
@@ -70,6 +83,7 @@ def main(sock):
         except OSError:
             pass
         else:
+            LOGGER.info(f'Установлено соедение с ПК {client_address}')
             clients.append(client)
 
         recv_data_lst = []
@@ -87,6 +101,7 @@ def main(sock):
                                            messages, client_with_message)
 
                 except:
+                    LOGGER.info(f'Клиент отключился от сервера.')
                     clients.remove(client_with_message)
 
         if messages and send_data_lst:
@@ -100,7 +115,8 @@ def main(sock):
             for waiting_client in send_data_lst:
                 try:
                     send_message(waiting_client, message)
-                except:
+                except Exception:
+                    LOGGER.info(f'Клиент {waiting_client.getpeername()} отключился от сервера.')
                     clients.remove(waiting_client)
 
 

@@ -1,0 +1,13 @@
+2023-05-12 12:31:27,691 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
+2023-05-12 12:31:27,691 INFO client.py Запущен клиент с парамертами: адрес сервера: localhost, порт: 8000
+2023-05-12 12:31:27,691 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-05-12 12:31:30,295 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
+2023-05-12 12:31:30,296 INFO client.py Запущен клиент с парамертами: адрес сервера: localhost, порт: 8000
+2023-05-12 12:31:30,296 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля client
+2023-05-12 12:31:45,152 DEBUG client.py Сформирован словарь сообщения: {'action': 'message', 'time': 1683883905.1522586, 'account_name': 'Guest', 'mess_text': 'sdfsdf'}
+2023-05-12 12:31:45,152 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля client
+2023-05-12 12:31:45,152 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-05-12 12:31:45,313 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-05-12 12:31:45,313 INFO client.py Получено сообщение от пользователя Guest:
+sdfsdf
+2023-05-12 12:31:45,314 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
