@@ -20,6 +20,7 @@ def get_message(client):
         raise Exception('Принято некорректное сообщение от удалённого компьютера.')
     raise Exception('Принято некорректное сообщение от удалённого компьютера.')
 
+
 @log
 def send_message(sock, message):
     """

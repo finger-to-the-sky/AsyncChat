@@ -1,4 +1,6 @@
 import argparse
+import sys
+
 from log.decorator import log
 
 
@@ -10,6 +12,10 @@ def arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument('-a', nargs='?', default='localhost')
     parser.add_argument('-p', default=8000)
-    args = parser.parse_args()
-    host, port = args.a, int(args.p)
-    return [host, port]
+    parser.add_argument('-n', '--name', default=None, nargs='?')
+    namespace = parser.parse_args(sys.argv[1:])
+    server_address = namespace.a
+    server_port = namespace.p
+    client_name = namespace.name
+    return server_address, server_port, client_name
+
