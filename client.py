@@ -122,9 +122,11 @@ def main():
     """
     Главная функция для чтения сообщений других пользователей
     """
+
+    server_address, server_port, client_name, mode = arguments()
     print('Консольный мессенджер. Клиентский модуль.')
-    server_address, server_port, client_name = arguments()
-    task = input('Выберите функцию:\n1.Чтение\n2.Запись\n')
+    if mode == 'send':
+        print('Отправка сообщений.')
     if not client_name:
         client_name = input('Введите имя пользователя: ')
 
@@ -146,7 +148,8 @@ def main():
             f'конечный компьютер отверг запрос на подключение.')
         sys.exit(1)
     else:
-        if task == 'Запись':
+        if mode == 'send':
+
             user_interactive(server_socket, client_name)
         else:
             message_from_server(server_socket, client_name)
