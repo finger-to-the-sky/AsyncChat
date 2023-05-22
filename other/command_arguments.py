@@ -19,5 +19,5 @@ def arguments():
     server_port = namespace.p
     client_name = namespace.name
     mode = namespace.mode
-    return server_address, server_port, client_name, mode
+    return server_address, int(server_port), client_name, mode
 

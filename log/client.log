@@ -814,3 +814,65 @@ sdfsdfsdf
 2023-05-21 19:53:43,271 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
 2023-05-21 19:53:43,272 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
 2023-05-21 19:53:43,273 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
+2023-05-21 20:00:03,328 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
+2023-05-21 20:00:03,332 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
+2023-05-21 20:00:31,733 INFO client.py Запущен клиент с параметрами: адрес сервера: localhost, порт: 8000, имя пользователя: user
+2023-05-21 20:00:31,734 DEBUG client.py Сформировано presence сообщение для пользователя user
+2023-05-21 20:00:31,734 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-05-21 20:00:31,734 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-05-21 20:00:31,734 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-05-21 20:00:31,734 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2023-05-21 20:00:31,734 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-05-21 20:00:31,734 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2023-05-21 20:00:34,811 INFO client.py Запущен клиент с параметрами: адрес сервера: localhost, порт: 8000, имя пользователя: sad
+2023-05-21 20:00:34,811 DEBUG client.py Сформировано presence сообщение для пользователя sad
+2023-05-21 20:00:34,812 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-05-21 20:00:34,812 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-05-21 20:00:35,313 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-05-21 20:00:35,313 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2023-05-21 20:00:35,313 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-05-21 20:00:35,313 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2023-05-21 20:00:50,182 DEBUG client.py Сформирован словарь сообщения: {'action': 'message', 'from': 'sad', 'to': 'user', 'time': 1684688450.1829572, 'mess_text': 'hi'}
+2023-05-21 20:00:50,183 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-05-21 20:00:50,183 INFO client.py Отправлено сообщение для пользователя user
+2023-05-21 20:00:50,183 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-05-21 20:00:50,328 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-05-21 20:00:50,328 INFO client.py Получено сообщение от пользователя sad:
+hi
+2023-05-21 20:01:43,496 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
+2023-05-21 20:01:43,496 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
+2023-05-21 20:01:43,498 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
+2023-05-21 20:01:43,501 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
+2023-05-21 20:01:43,503 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
+2023-05-21 20:01:43,507 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
+2023-05-22 11:12:44,612 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
+2023-05-22 11:12:44,612 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
+2023-05-22 11:12:44,613 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
+2023-05-22 11:12:44,620 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
+2023-05-22 11:12:50,399 INFO client.py Запущен клиент с параметрами: адрес сервера: localhost, порт: 8000, имя пользователя: user
+2023-05-22 11:12:50,399 DEBUG client.py Сформировано presence сообщение для пользователя user
+2023-05-22 11:12:50,399 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-05-22 11:12:50,400 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-05-22 11:12:50,901 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-05-22 11:12:50,901 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2023-05-22 11:12:50,901 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-05-22 11:12:50,901 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2023-05-22 11:13:06,220 INFO client.py Запущен клиент с параметрами: адрес сервера: localhost, порт: 8000, имя пользователя: user
+2023-05-22 11:13:06,221 DEBUG client.py Сформировано presence сообщение для пользователя user
+2023-05-22 11:13:06,221 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-05-22 11:13:06,221 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-05-22 11:13:06,221 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-05-22 11:13:06,221 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 400, 'error': 'Имя пользователя уже занято.'}
+2023-05-22 15:26:27,015 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.command_arguments
+2023-05-22 15:26:32,694 INFO client.py Запущен клиент с параметрами: адрес сервера: localhost, порт: 8000, имя пользователя: user
+2023-05-22 15:26:32,694 DEBUG client.py Сформировано presence сообщение для пользователя user
+2023-05-22 15:26:32,694 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-05-22 15:26:32,694 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-05-22 15:26:32,694 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-05-22 15:26:32,694 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2023-05-22 15:26:32,694 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-05-22 15:26:32,694 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2023-05-22 15:26:37,148 DEBUG client.py Сформирован словарь сообщения: {'action': 'message', 'from': 'user', 'to': 'asd', 'time': 1684758397.1484613, 'mess_text': 'asdasd'}
+2023-05-22 15:26:37,148 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-05-22 15:26:37,148 INFO client.py Отправлено сообщение для пользователя asd
+2023-05-22 15:26:37,148 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
