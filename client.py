@@ -37,7 +37,7 @@ def message_from_server(sock, my_username):
 
 
 @log
-def create_message(sock, account_name='Guest'):
+def create_message(sock, account_name):
     """
     Функция запрашивает кому отправить сообщение и само сообщение,
     и отправляет полученные данные на сервер
@@ -124,9 +124,10 @@ def main():
     """
     print('Консольный мессенджер. Клиентский модуль.')
     server_address, server_port, client_name = arguments()
-
+    task = input('Выберите функцию:\n1.Чтение\n2.Запись\n')
     if not client_name:
         client_name = input('Введите имя пользователя: ')
+
 
     LOGGER.info(
         f'Запущен клиент с параметрами: адрес сервера: {server_address}, '
@@ -145,20 +146,23 @@ def main():
             f'конечный компьютер отверг запрос на подключение.')
         sys.exit(1)
     else:
-
-        receiver = threading.Thread(target=message_from_server, args=(server_socket, client_name))
-        receiver.daemon = True
-        receiver.start()
-
-        user_interface = threading.Thread(target=user_interactive, args=(server_socket, client_name))
-        user_interface.daemon = True
-        user_interface.start()
-
-        while True:
-            time.sleep(1)
-            if receiver.is_alive() and user_interface.is_alive():
-                continue
-            break
+        if task == 'Запись':
+            user_interactive(server_socket, client_name)
+        else:
+            message_from_server(server_socket, client_name)
+        # receiver = threading.Thread(target=message_from_server, args=(server_socket, client_name))
+        # receiver.daemon = True
+        # receiver.start()
+        #
+        # user_interface = threading.Thread(target=user_interactive, args=(server_socket, client_name))
+        # user_interface.daemon = True
+        # user_interface.start()
+        #
+        # while True:
+        #     time.sleep(1)
+        #     if receiver.is_alive() and user_interface.is_alive():
+        #         continue
+        #     break
 
 
 if __name__ == '__main__':
