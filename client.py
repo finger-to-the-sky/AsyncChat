@@ -20,7 +20,7 @@ class ClientVerifier(type):
             try:
                 ret = dis.get_instructions(namespace[method])
                 for i in ret:
-                    if i.opname == "LOAD_GLOBAL":
+                    if i.opname == 'LOAD_METHOD':
                         if i.argval not in allow_methods:
                             allow_methods.append(i.argval)
             except TypeError:

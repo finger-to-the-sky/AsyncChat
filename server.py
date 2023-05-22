@@ -22,7 +22,7 @@ class ServerVerifier(type):
             try:
                 ret = dis.get_instructions(namespace[method])
                 for i in ret:
-                    if i.opname == 'LOAD_GLOBAL':
+                    if i.opname == 'LOAD_METHOD':
                         if i.argval not in allow_methods:
                             allow_methods.append(i.argval)
                     elif i.opname == 'LOAD_ATTR':
