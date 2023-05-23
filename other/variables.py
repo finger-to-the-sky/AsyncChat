@@ -2,7 +2,7 @@
 
 import logging
 
-# Порт поумолчанию для сетевого ваимодействия
+# Порт по умолчанию для сетевого взаимодействия
 DEFAULT_PORT = 8000
 # IP адрес по умолчанию для подключения клиента
 DEFAULT_IP_ADDRESS = 'localhost'
@@ -15,7 +15,7 @@ ENCODING = 'utf-8'
 # Текущий уровень логирования
 LOGGING_LEVEL = logging.DEBUG
 
-# Прококол JIM основные ключи:
+# Протокол JIM основные ключи:
 ACTION = 'action'
 TIME = 'time'
 USER = 'user'

@@ -7,7 +7,7 @@ from log.decorator import log
 @log
 def arguments():
     """
-    Функция принятия и передачи аргументов сокетам с значениями по дефолту
+    Функция принятия и передачи аргументов сокетам со значениями по дефолту
     """
     parser = argparse.ArgumentParser()
     parser.add_argument('-a', nargs='?', default='localhost')

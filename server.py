@@ -42,7 +42,7 @@ class Port:
         self.name = name
 
     def __set__(self, obj, value):
-        if not 1023 < value< 65536:
+        if not 1023 < value < 65536:
             LOGGER.critical(
                 f'Попытка запуска сервера с указанием неподходящего порта {value}. Допустимы адреса с 1024 до 65535.')
             exit(1)
@@ -77,7 +77,7 @@ class Server(metaclass=ServerVerifier):
     @log
     def process_client_message(self, message, messages_list, client, clients, names):
         """
-        Обработчик сообщений от клиентов, принимает словарь - сообщение от клинта,
+        Обработчик сообщений от клиентов, принимает словарь - сообщение от клиента,
         проверяет корректность, отправляет словарь-ответ для клиента с результатом приёма.
         :param message:
         :param messages_list:
@@ -122,7 +122,7 @@ class Server(metaclass=ServerVerifier):
     def process_message(self, message, names, listen_socks):
         """
         Функция адресной отправки сообщения определённому клиенту. Принимает словарь сообщение,
-        список зарегистрированых пользователей и слушающие сокеты. Ничего не возвращает.
+        список зарегистрированных пользователей и слушающие сокеты. Ничего не возвращает.
         :param message:
         :param names:
         :param listen_socks:
