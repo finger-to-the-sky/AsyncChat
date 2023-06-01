@@ -1,14 +1,11 @@
 import argparse
 import configparser
-import dis
 import logging
 import os
 import sys
 import threading
-
 from PyQt5.QtCore import QTimer
 from PyQt5.QtWidgets import QMessageBox, QApplication
-
 from db.server_storage import ServerStorage
 import socket
 import select
@@ -19,35 +16,12 @@ from other.variables import MAX_CONNECTIONS, ACTION, TIME, \
     REMOVE_CONTACT, USERS_REQUEST
 import log.server_log_config
 from log.decorator import log
+from metaclasess import ServerVerifier
 from server_gui import HistoryWindow, create_stat_model, ConfigWindow, gui_create_model, MainWindow
 
 LOGGER = logging.getLogger('server')
 new_connection = False
 conflag_lock = threading.Lock()
-
-
-class ServerVerifier(type):
-    def __init__(cls, name, bases, namespace):
-
-        allow_methods = []
-        attrs = []
-        for method in namespace:
-            try:
-                ret = dis.get_instructions(namespace[method])
-                for i in ret:
-                    if i.opname == 'LOAD_METHOD':
-                        if i.argval not in allow_methods:
-                            allow_methods.append(i.argval)
-                    elif i.opname == 'LOAD_ATTR':
-                        if i.argval not in attrs:
-                            attrs.append(i.argval)
-            except TypeError:
-                pass
-        if 'connect' in allow_methods:
-            raise TypeError
-        if 'sock' not in attrs:
-            raise TypeError('Socket Error')
-        super().__init__(name, bases, namespace)
 
 
 class Port:
@@ -149,15 +123,12 @@ class Server(threading.Thread, metaclass=ServerVerifier):
             self.messages.clear()
 
     @log
-    def process_client_message(self, message, messages_list, client, clients, names):
+    def process_client_message(self, message, client):
         """
         Обработчик сообщений от клиентов, принимает словарь - сообщение от клиента,
         проверяет корректность, отправляет словарь-ответ для клиента с результатом приёма.
         :param message:
-        :param messages_list:
         :param client:
-        :param clients:
-        :param names:
         :return:
         """
         global new_connection
@@ -279,6 +250,8 @@ def main():
     server = Server(listen_address, listen_port, database)
     server.daemon = True
     server.start()
+
+###############################################################################################
 
     server_app = QApplication(sys.argv)
     main_window = MainWindow()

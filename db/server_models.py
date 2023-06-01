@@ -1,6 +1,13 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
-from .database import Base
 from datetime import datetime
+from sqlalchemy.orm import DeclarativeBase
+
+
+class Base(DeclarativeBase):
+    """
+    Базовый класс для моделей
+    """
+    pass
 
 
 class Users(Base):

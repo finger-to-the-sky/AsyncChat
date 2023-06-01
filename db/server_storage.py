@@ -1,11 +1,16 @@
-from .models import *
-from .database import Base, engine, SessionLocal
+from sqlalchemy import create_engine
+
+from db.server_models import *
+from sqlalchemy.orm import Session
 
 
 class ServerStorage:
     def __init__(self):
-        Base.metadata.create_all(engine)
-        self.session = SessionLocal()
+        self.name_db = f"sqlite:///server_db.db"
+        self.engine = create_engine(self.name_db, echo=False, pool_recycle=7200,
+                                    connect_args={'check_same_thread': False})
+        Base.metadata.create_all(self.engine)
+        self.session = Session(self.engine)
 
         self.session.query(ActiveUsers).delete()
         self.session.commit()
@@ -68,7 +73,7 @@ class ServerStorage:
             ActiveUsers.ip_address,
             ActiveUsers.port,
             ActiveUsers.login_time,
-        )
+        ).select_from(Users)
         return query.all()
 
     def login_history(self, username=None):
@@ -89,6 +94,7 @@ class ServerStorage:
 
 if __name__ == '__main__':
     test_db = ServerStorage()
+
     # выполняем 'подключение' пользователя
     test_db.login('client_1', '192.168.1.4', 8888)
     test_db.login('client_2', '192.168.1.5', 7777)
