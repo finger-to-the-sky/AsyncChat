@@ -74,7 +74,6 @@ class Server(threading.Thread, metaclass=ServerVerifier):
         Принимаем сообщения и если там есть сообщения кладём в словарь,
         если ошибка, исключаем клиента.
         Если есть сообщения для отправки и ожидающие клиенты, отправляем им сообщение.
-        :param sock:
         """
 
         self.server_socket()
@@ -211,7 +210,6 @@ class Server(threading.Thread, metaclass=ServerVerifier):
         Функция адресной отправки сообщения определённому клиенту. Принимает словарь сообщение,
         список зарегистрированных пользователей и слушающие сокеты. Ничего не возвращает.
         :param message:
-        :param names:
         :param listen_socks:
         :return:
         """
@@ -251,18 +249,16 @@ def main():
     server.daemon = True
     server.start()
 
-###############################################################################################
 
     server_app = QApplication(sys.argv)
     main_window = MainWindow()
 
-    # Инициализируем параметры в окна
     main_window.statusBar().showMessage('Server Working')
     main_window.active_clients_table.setModel(gui_create_model(database))
     main_window.active_clients_table.resizeColumnsToContents()
     main_window.active_clients_table.resizeRowsToContents()
 
-    # Функция обновляющяя список подключённых, проверяет флаг подключения, и
+    # Функция обновляющая список подключённых, проверяет флаг подключения, и
     # если надо обновляет список
     def list_update():
         global new_connection
@@ -274,7 +270,7 @@ def main():
             with conflag_lock:
                 new_connection = False
 
-    # Функция создающяя окно со статистикой клиентов
+    # Функция создающая окно со статистикой клиентов
     def show_statistics():
         global stat_window
         stat_window = HistoryWindow()
@@ -283,7 +279,7 @@ def main():
         stat_window.history_table.resizeRowsToContents()
         stat_window.show()
 
-    # Функция создающяя окно с настройками сервера.
+    # Функция создающая окно с настройками сервера.
     def server_config():
         global config_window
         # Создаём окно и заносим в него текущие параметры

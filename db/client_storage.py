@@ -3,6 +3,10 @@ from sqlalchemy.orm import Session
 
 
 class ClientDatabase:
+    """
+    Класс для работы с клиентской БД, содержащий методы для таблиц
+    Контактов, Сообщений и Историей.
+    """
 
     def __init__(self, name: str):
         self.name_db = f"sqlite:///client_{name}.db"

@@ -2,6 +2,10 @@ import dis
 
 
 class ServerVerifier(type):
+    """
+    Метакласс для обработки функций используемых при создании сервера
+    """
+
     def __init__(cls, name, bases, namespace):
 
         allow_methods = []
@@ -26,6 +30,10 @@ class ServerVerifier(type):
 
 
 class ClientVerifier(type):
+    """
+    Метакласс для обработки функций используемых при создании клиента
+    """
+
     def __init__(cls, name, bases, namespace):
         allow_methods = []
         for method in namespace:
