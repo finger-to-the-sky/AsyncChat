@@ -1,4 +1,4 @@
-from clients_models import *
+from db.clients_models import *
 from sqlalchemy.orm import Session
 
 

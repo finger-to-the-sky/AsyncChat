@@ -105,7 +105,7 @@ class Server(threading.Thread, metaclass=ServerVerifier):
                             f'Клиент {client_with_message.getpeername()} отключился от сервера.')
                         for name in self.names:
                             if self.names[name] == client_with_message:
-                                self.database.user_logout(name)
+                                self.database.logout(name)
                                 del self.names[name]
                                 break
                         self.clients.remove(client_with_message)
@@ -140,7 +140,7 @@ class Server(threading.Thread, metaclass=ServerVerifier):
             if message[USER][ACCOUNT_NAME] not in self.names.keys():
                 self.names[message[USER][ACCOUNT_NAME]] = client
                 client_ip, client_port = client.getpeername()
-                self.database.user_login(
+                self.database.login(
                     message[USER][ACCOUNT_NAME], client_ip, client_port)
                 send_message(client, RESPONSE_200)
                 with conflag_lock:
@@ -248,7 +248,6 @@ def main():
     server = Server(listen_address, listen_port, database)
     server.daemon = True
     server.start()
-
 
     server_app = QApplication(sys.argv)
     main_window = MainWindow()

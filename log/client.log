@@ -876,3 +876,124 @@ hi
 2023-05-22 15:26:37,148 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
 2023-05-22 15:26:37,148 INFO client.py Отправлено сообщение для пользователя asd
 2023-05-22 15:26:37,148 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-06-07 13:13:26,598 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-06-07 13:13:29,145 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: user
+2023-06-07 13:13:29,176 INFO transport.py Попытка подключения №1
+2023-06-07 13:13:29,177 DEBUG transport.py Установлено соединение с сервером
+2023-06-07 13:13:29,177 DEBUG transport.py Сформировано presence сообщение для пользователя user
+2023-06-07 13:13:29,177 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-07 13:13:34,182 CRITICAL transport.py Потеряно соединение с сервером!
+2023-06-07 13:15:18,242 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-06-07 13:15:21,498 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: user
+2023-06-07 13:15:21,511 INFO transport.py Попытка подключения №1
+2023-06-07 13:15:21,511 DEBUG transport.py Установлено соединение с сервером
+2023-06-07 13:15:21,511 DEBUG transport.py Сформировано presence сообщение для пользователя user
+2023-06-07 13:15:21,511 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-07 13:15:26,516 CRITICAL transport.py Потеряно соединение с сервером!
+2023-06-07 13:17:07,486 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-06-07 13:17:09,476 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: user
+2023-06-07 13:17:09,496 INFO transport.py Попытка подключения №1
+2023-06-07 13:17:09,497 DEBUG transport.py Установлено соединение с сервером
+2023-06-07 13:17:09,497 DEBUG transport.py Сформировано presence сообщение для пользователя user
+2023-06-07 13:17:09,497 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-07 13:17:14,502 CRITICAL transport.py Потеряно соединение с сервером!
+2023-06-07 13:17:41,584 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-06-07 13:17:43,759 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: s
+2023-06-07 13:17:43,784 INFO transport.py Попытка подключения №1
+2023-06-07 13:17:43,784 DEBUG transport.py Установлено соединение с сервером
+2023-06-07 13:17:43,784 DEBUG transport.py Сформировано presence сообщение для пользователя s
+2023-06-07 13:17:43,784 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-07 13:17:43,791 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-07 13:17:43,791 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2023-06-07 13:17:43,791 INFO transport.py Соединение с сервером успешно установлено.
+2023-06-07 13:17:43,791 DEBUG transport.py Запрос списка известных пользователей s
+2023-06-07 13:17:43,791 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-07 13:17:44,293 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-07 13:17:44,296 DEBUG transport.py Запрос контакт листа для пользователся Thread-1
+2023-06-07 13:17:44,296 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1686133064.2969074, 'user': 's'}
+2023-06-07 13:17:44,296 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-07 13:17:49,298 ERROR transport.py Timeout соединения при обновлении списков пользователей.
+2023-06-07 13:17:49,298 DEBUG transport.py Запущен процесс - приёмник собщений с сервера.
+2023-06-07 13:17:52,302 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-07 13:17:52,302 DEBUG transport.py Транспорт завершает работу.
+2023-06-08 13:00:53,698 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-06-08 13:00:55,764 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: user
+2023-06-08 13:00:55,789 INFO transport.py Попытка подключения №1
+2023-06-08 13:00:55,789 DEBUG transport.py Установлено соединение с сервером
+2023-06-08 13:00:55,789 DEBUG transport.py Сформировано presence сообщение для пользователя user
+2023-06-08 13:00:55,789 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:00:55,797 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:00:55,797 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2023-06-08 13:00:55,797 INFO transport.py Соединение с сервером успешно установлено.
+2023-06-08 13:00:55,797 DEBUG transport.py Запрос списка известных пользователей user
+2023-06-08 13:00:55,797 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:00:56,300 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:00:56,312 DEBUG transport.py Запрос контакт листа для пользователся Thread-1
+2023-06-08 13:00:56,312 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1686218456.3128927, 'user': 'user'}
+2023-06-08 13:00:56,313 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:01:01,315 ERROR transport.py Timeout соединения при обновлении списков пользователей.
+2023-06-08 13:01:01,316 DEBUG transport.py Запущен процесс - приёмник собщений с сервера.
+2023-06-08 13:01:09,519 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:01:09,519 DEBUG transport.py Транспорт завершает работу.
+2023-06-08 13:02:38,934 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-06-08 13:02:42,701 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: user
+2023-06-08 13:02:42,714 INFO transport.py Попытка подключения №1
+2023-06-08 13:02:42,714 DEBUG transport.py Установлено соединение с сервером
+2023-06-08 13:02:42,714 DEBUG transport.py Сформировано presence сообщение для пользователя user
+2023-06-08 13:02:42,714 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:02:42,720 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:02:42,720 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2023-06-08 13:02:42,720 INFO transport.py Соединение с сервером успешно установлено.
+2023-06-08 13:02:42,720 DEBUG transport.py Запрос списка известных пользователей user
+2023-06-08 13:02:42,720 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:02:43,224 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:02:43,233 DEBUG transport.py Запрос контакт листа для пользователся Thread-1
+2023-06-08 13:02:43,233 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1686218563.2338693, 'user': 'user'}
+2023-06-08 13:02:43,233 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:02:48,239 ERROR transport.py Timeout соединения при обновлении списков пользователей.
+2023-06-08 13:02:48,240 DEBUG transport.py Запущен процесс - приёмник собщений с сервера.
+2023-06-08 13:02:59,834 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-06-08 13:03:01,614 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: a
+2023-06-08 13:03:01,646 INFO transport.py Попытка подключения №1
+2023-06-08 13:03:01,646 DEBUG transport.py Установлено соединение с сервером
+2023-06-08 13:03:01,646 DEBUG transport.py Сформировано presence сообщение для пользователя a
+2023-06-08 13:03:01,646 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:03:01,647 DEBUG transport.py Потеряно соединение с сервером.
+2023-06-08 13:03:01,653 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:03:01,654 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2023-06-08 13:03:01,654 INFO transport.py Соединение с сервером успешно установлено.
+2023-06-08 13:03:01,654 DEBUG transport.py Запрос списка известных пользователей a
+2023-06-08 13:03:01,654 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:03:02,156 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:03:02,172 DEBUG transport.py Запрос контакт листа для пользователся Thread-1
+2023-06-08 13:03:02,172 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1686218582.1726546, 'user': 'a'}
+2023-06-08 13:03:02,172 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:03:03,468 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:03:03,468 DEBUG transport.py Транспорт завершает работу.
+2023-06-08 13:03:07,178 ERROR transport.py Timeout соединения при обновлении списков пользователей.
+2023-06-08 13:03:07,179 DEBUG transport.py Запущен процесс - приёмник собщений с сервера.
+2023-06-08 13:03:14,118 DEBUG transport.py Создание контакта user
+2023-06-08 13:03:14,119 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:03:25,465 DEBUG transport.py Создание контакта user
+2023-06-08 13:03:25,630 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:03:56,314 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля __main__
+2023-06-08 13:03:58,911 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: user
+2023-06-08 13:03:58,924 INFO transport.py Попытка подключения №1
+2023-06-08 13:03:58,925 DEBUG transport.py Установлено соединение с сервером
+2023-06-08 13:03:58,925 DEBUG transport.py Сформировано presence сообщение для пользователя user
+2023-06-08 13:03:58,925 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:03:58,928 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:03:58,928 DEBUG transport.py Разбор сообщения от сервера: {'response': 200}
+2023-06-08 13:03:58,928 INFO transport.py Соединение с сервером успешно установлено.
+2023-06-08 13:03:58,928 DEBUG transport.py Запрос списка известных пользователей user
+2023-06-08 13:03:58,928 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:03:59,168 CRITICAL transport.py Потеряно соединение с сервером.
+2023-06-08 13:03:59,431 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:03:59,445 DEBUG transport.py Запрос контакт листа для пользователся Thread-1
+2023-06-08 13:03:59,445 DEBUG transport.py Сформирован запрос {'action': 'get_contacts', 'time': 1686218639.4455404, 'user': 'user'}
+2023-06-08 13:03:59,445 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:04:00,607 DEBUG transport.py Транспорт завершает работу.
+2023-06-08 13:04:04,447 ERROR transport.py Timeout соединения при обновлении списков пользователей.
+2023-06-08 13:04:04,448 DEBUG transport.py Запущен процесс - приёмник собщений с сервера.
+2023-06-08 13:04:06,616 DEBUG decorator.py Была вызвана функция {func_to_log.__name__} c параметрами {args}, {kwargs}. Вызов из модуля other.utils
+2023-06-08 13:04:06,616 DEBUG transport.py Транспорт завершает работу.
